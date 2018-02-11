@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\OenO\.android\build-cache\4318d95edf8dc1dd674ee8a72b02a4ae6108f221\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
+        <dex dex="G:\project versions\GFO-MeesterProef-2.2-master\GFO-MeesterProef-2.2-master\app\build\intermediates\pre-dexed\debug\classes_744028ea17699a9b28ed587f1ca4b19ea44f2804.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\OenO\.android\build-cache\3a8e8f0e3464a52a4784608f7ddb8de276413057\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="G:\project versions\GFO-MeesterProef-2.2-master\GFO-MeesterProef-2.2-master\app\build\intermediates\pre-dexed\debug\classes_646cc0cd3b800e4069b118ad952ae820c1467071.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\OenO\.android\build-cache\b43099b912e0d16ebc169f97beaf48b7e156d28f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="G:\project versions\GFO-MeesterProef-2.2-master\GFO-MeesterProef-2.2-master\app\build\intermediates\pre-dexed\debug\classes_c7b7e4dfa0e081bb559fa06973f2868e0e0856bc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\OenO\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="G:\project versions\GFO-MeesterProef-2.2-master\GFO-MeesterProef-2.2-master\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.1_a6e26479aea426e83fe4e9c68403ca8218ecdd88.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\OenO\.android\build-cache\6d8053ab9dae7dc37bb209e03be1646fe83e4269\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="G:\project versions\GFO-MeesterProef-2.2-master\GFO-MeesterProef-2.2-master\app\build\intermediates\pre-dexed\debug\classes_6b71952ec5b75bf5c13698245c6cec91eca4771d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\OenO\.android\build-cache\808bcc822349219f9a0d47bfaf5aeb80615579ef\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="G:\project versions\GFO-MeesterProef-2.2-master\GFO-MeesterProef-2.2-master\app\build\intermediates\pre-dexed\debug\classes_3f114999e45df0534e76b536614e72887360ec0e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\OenO\.android\build-cache\28d99d9394c416580fccff58bd8cbfb24add9301\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="G:\project versions\GFO-MeesterProef-2.2-master\GFO-MeesterProef-2.2-master\app\build\intermediates\pre-dexed\debug\classes_0d3e4d12f31511a33e462676d17278d1e523db4b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\OenO\.android\build-cache\a38ace9b092d744af5544c5fbcc0c905c2fed7f0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="G:\project versions\GFO-MeesterProef-2.2-master\GFO-MeesterProef-2.2-master\app\build\intermediates\pre-dexed\debug\classes_383f1a233d5877952a2288b9a45b382d91937029.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\OenO\.android\build-cache\24a1cec4d0ca81bbfbae234e685fe98e5bbf03c1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="G:\project versions\GFO-MeesterProef-2.2-master\GFO-MeesterProef-2.2-master\app\build\intermediates\pre-dexed\debug\classes_6a6d645dc1557b858b4628c38cb5dcdc427b9847.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\OenO\.android\build-cache\2bbc8383b81608e1f4d0b01c4ef8d40e851ce67e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
+        <dex dex="G:\project versions\GFO-MeesterProef-2.2-master\GFO-MeesterProef-2.2-master\app\build\intermediates\pre-dexed\debug\classes_11204a253ceca48a0d0223d31fcf6b3a038d38bd.jar" />
+    </item>
+
+</items>

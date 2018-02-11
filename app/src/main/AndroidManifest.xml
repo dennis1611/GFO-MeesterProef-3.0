@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gfo.gfo_meesterproef">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/gfoimage"
+        android:label="GFO"
+        android:roundIcon="@mipmap/gfoimage"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginActivity"
+            android:label="GFO">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".User.FetchProductActivity"
+            android:label="Fetch Product" />
+        <activity
+            android:name=".Admin.AdminActivity"
+            android:label="Admin" />
+        <activity
+            android:name=".Admin.AddAccount.AddAccountActivity"
+            android:label="Add Account" />
+        <activity
+            android:name=".Admin.ViewAccount.ViewAccountActivity"
+            android:label="View Account"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Admin.ViewFiles.ViewProductActivity"
+            android:label="View Product" />
+        <activity
+            android:name=".Admin.ViewFiles.ViewFileActivity"
+            android:label="View File" />
+        <activity
+            android:name=".User.FetchFileActivity"
+            android:label="Fetch File" />
+        <activity
+            android:name=".OpenFileActivity"
+            android:label="Open File" />
+        <activity
+            android:name=".Admin.ViewAccount.EditAccount.EditAccountActivity"
+            android:label="Edit Account" />
+        <activity
+            android:name=".Admin.ViewFiles.CoupleToProduct.CoupleToProductActivity"
+            android:label="Couple To Product" />
+        <activity
+            android:name=".Admin.ViewAccount.CoupleToAccount.CoupleToAccountActivity"
+            android:label="Couple To Account" />
+        <activity android:name=".User.UserActivity"
+            android:label="User"></activity>
+    </application>
+
+</manifest>
