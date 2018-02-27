@@ -2,6 +2,7 @@ package com.gfo.gfo_meesterproef.Admin.ViewAccount.CoupleToAccount;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -69,13 +70,12 @@ public class CoupleToAccountActivity extends AppCompatActivity {
         list.setBackgroundResource(R.color.white);
         ArrayAdapter<String> listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, totalList);
         list.setAdapter(listAdapter);
+
 //        compare total list and already coupled list
         list.post(new Runnable() {
             @Override
             public void run() {
                 for (int i = 0; i < totalList.size(); i++) {
-//                    set default tag
-                    list.getChildAt(i).setTag(R.color.white);
                     if (alreadyCoupled.contains(totalList.get(i))) {
                         list.getChildAt(i).setBackgroundResource(R.color.blue);
                         list.getChildAt(i).setTag(R.color.blue);
@@ -92,22 +92,29 @@ public class CoupleToAccountActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View viewClicked, int position, long id) {
 //                get productname of clicked view
                 TextView textView = (TextView) viewClicked;
-//                get color tag and add or delete from to (un)couple list
                 String product = textView.getText().toString();
-                int ColorId = Integer.parseInt(viewClicked.getTag().toString());
-                if (ColorId==R.color.blue){
-                    viewClicked.setBackgroundResource(R.color.red);
-                    viewClicked.setTag(R.color.red);
-                    toUncouple.add(product);
-                } else if (ColorId==R.color.red){
-                    viewClicked.setBackgroundResource(R.color.blue);
-                    viewClicked.setTag(R.color.blue);
-                    toUncouple.remove(product);
-                } else if (ColorId==R.color.green){
-                    viewClicked.setBackgroundResource(R.color.white);
-                    viewClicked.setTag(R.color.white);
-                    toCouple.remove(product);
-                } else if (ColorId==R.color.white){
+//                add or delete from to (un)couple list
+                if (viewClicked.getTag()!=null){//                    if a tag has been set
+                    int ColorId = Integer.parseInt(viewClicked.getTag().toString());
+                    if (ColorId==R.color.blue){
+                        viewClicked.setBackgroundResource(R.color.red);
+                        viewClicked.setTag(R.color.red);
+                        toUncouple.add(product);
+                    } else if (ColorId==R.color.red){
+                        viewClicked.setBackgroundResource(R.color.blue);
+                        viewClicked.setTag(R.color.blue);
+                        toUncouple.remove(product);
+                    } else if (ColorId==R.color.green){
+                        viewClicked.setBackgroundResource(R.color.white);
+                        viewClicked.setTag(R.color.white);
+                        toCouple.remove(product);
+                    } else if (ColorId==R.color.white){
+                        viewClicked.setBackgroundResource(R.color.green);
+                        viewClicked.setTag(R.color.green);
+                        toCouple.add(product);
+                    }
+                } else {//                    needed because there is no default tag (done to increase performance)
+                    list.getChildAt(position).setTag(R.color.white);
                     viewClicked.setBackgroundResource(R.color.green);
                     viewClicked.setTag(R.color.green);
                     toCouple.add(product);
@@ -115,7 +122,6 @@ public class CoupleToAccountActivity extends AppCompatActivity {
             }
         });
     }
-
 
     @Override
 //    needed for icon in toolbar
