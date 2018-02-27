@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_width="400dp"
         android:layout_height="400dp"
-        android:background="@mipmap/Dennis">
+        android:background="@mipmap/gfoimage">
 
         <Button
             android:layout_width="102dp"
