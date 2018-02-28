@@ -92,10 +92,10 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginLeft="80dp"
+                android:layout_marginLeft="50dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="30dp">
 
@@ -107,7 +107,7 @@
 
                 <EditText
                     android:id="@+id/usernameEditText"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Username"
                     style="@style/EditText"
@@ -140,6 +140,7 @@
         android:layout_gravity="center"
         android:onClick="editAccount"
         android:text="EDIT ACCOUNT"
-        android:layout_marginTop="80dp" />
+        android:layout_marginTop="20dp" />
 
 </LinearLayout>
+
