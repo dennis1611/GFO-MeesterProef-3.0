@@ -1,4 +1,4 @@
-package com.gfo.gfo_meesterproef;
+package com.gfo.gfo_meesterproef.SearchTool;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -16,40 +16,39 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 
-public class LoginBackgroundWorker extends AsyncTask<String, Void, String> {
+public class LookUpMeter extends AsyncTask<String, Void, String> {
 
     Context context;
-    LoginBackgroundWorker(Context ctx) {
+    LookUpMeter(Context ctx) {
         context = ctx;
     }
 
     @Override
     protected String doInBackground(String... params) {
         String type = params[0];
-        String username = params[1];
-        String password = params[2];
-        String login_url = "https://mantixcloud.nl/gfo/login.php";
+        String gRating = params[1];
+        String diameter = params[2];
+        String login_url = "https://mantixcloud.nl/gfo/searchtool/lookup.php";
         String result = null;
-        if(type.equals("login")) {
+        if (type.equals("lookup")){
             try {
-//                connect to database
+                //                connect to database
                 URL url = new URL(login_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
                 httpURLConnection.setDoInput(true);
-
-//                send data
+                //                send data
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "iso-8859-1"));
-                String post_data = URLEncoder.encode("username","iso-8859-1")+"="+URLEncoder.encode(username,"iso-8859-1")+"&"
-                        +URLEncoder.encode("password","iso-8859-1")+"="+URLEncoder.encode(password,"iso-8859-1");
+                String post_data = URLEncoder.encode("gRating","iso-8859-1")+"="+URLEncoder.encode(gRating,"iso-8859-1")+"&"
+                        +URLEncoder.encode("diameter","iso-8859-1")+"="+URLEncoder.encode(diameter,"iso-8859-1");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
                 outputStream.close();
 
-//                receive data
+                //                receive data
                 InputStream inputStream = httpURLConnection.getInputStream();
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream,"iso-8859-1"));
                 result="";
@@ -62,24 +61,12 @@ public class LoginBackgroundWorker extends AsyncTask<String, Void, String> {
 
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
+            }
+            catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }return result;
-    }
-
-    @Override
-    protected void onPreExecute() {
-    }
-
-    @Override
-    protected void onPostExecute(String result) {
-    }
-
-    @Override
-    protected void onProgressUpdate(Void... values) {
-        super.onProgressUpdate(values);
     }
 }

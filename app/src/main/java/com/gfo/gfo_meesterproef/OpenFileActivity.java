@@ -20,7 +20,7 @@ public class OpenFileActivity extends AppCompatActivity {
         //        get selected group from ViewProductActivity
         String clickedFile = getIntent().getExtras().getString("file", "");
 
-        //contact database for products
+        //contact database for files
         String type = "view";
         String url = null;
         try{

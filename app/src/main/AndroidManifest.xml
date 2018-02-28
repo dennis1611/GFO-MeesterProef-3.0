@@ -14,7 +14,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".LoginActivity"
-            android:label="GFO">
+            android:label="GFO"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,47 +24,62 @@
         </activity>
         <activity
             android:name=".User.FetchProductActivity"
-            android:label="Fetch Product" />
+            android:label="Fetch Product"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Admin.AdminActivity"
-            android:label="Admin" />
+            android:label="Admin"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Admin.AddAccount.AddAccountActivity"
-            android:label="Add Account" />
+            android:label="Add Account"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Admin.ViewAccount.ViewAccountActivity"
             android:label="View Account"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Admin.ViewFiles.ViewProductActivity"
-            android:label="View Product" />
+            android:label="View Product"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Admin.ViewFiles.ViewFileActivity"
-            android:label="View File" />
+            android:label="View File"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".User.FetchFileActivity"
-            android:label="Fetch File" />
+            android:label="Fetch File"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".OpenFileActivity"
-            android:label="Open File" />
+            android:label="Open File"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Admin.ViewAccount.EditAccount.EditAccountActivity"
-            android:label="Edit Account" />
+            android:label="Edit Account"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Admin.ViewFiles.CoupleToProduct.CoupleToProductActivity"
-            android:label="Couple To Product" />
+            android:label="Couple To Product"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Admin.ViewAccount.CoupleToAccount.CoupleToAccountActivity"
-            android:label="Couple To Account" />
+            android:label="Couple To Account"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".User.UserActivity"
-            android:label="User" />
+            android:label="User"
+            android:screenOrientation="portrait"/>
         <activity android:name=".SearchTool.LookUpMeterActivity"
-            android:label="Look Up Meter"/>
+            android:label="Look Up Meter"
+            android:screenOrientation="portrait"/>
         <activity android:name=".SearchTool.SearchMeterActivity"
-            android:label="Search Meter"/>
+            android:label="Search Meter"
+            android:screenOrientation="portrait"/>
         <activity android:name=".SearchTool.SettingsActivity"
-            android:label="Settings"></activity>
+            android:label="Settings"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
