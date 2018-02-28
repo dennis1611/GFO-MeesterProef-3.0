@@ -14,14 +14,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by O&O on 28-2-2018.
- */
 
-public class ViewDiameter extends AsyncTask<String, Void, List<String>> {
+public class ViewGRatingDiameter extends AsyncTask<String, Void, List<String>> {
 
     Context context;
-    public ViewDiameter(Context ctx) {
+    public ViewGRatingDiameter(Context ctx) {
         context = ctx;
     }
 
@@ -29,11 +26,14 @@ public class ViewDiameter extends AsyncTask<String, Void, List<String>> {
     protected List<String> doInBackground(String... params) {
 
         String type = params[0];
-        String view_url = "https://mantixcloud.nl/gfo/searchtool/diameters.php";
+//        set view_url
+        String view_url = null;
+        if (type.equals("gRating")){view_url="https://mantixcloud.nl/gfo/searchtool/gRatings.php";}
+        if (type.equals("diameter")){view_url="https://mantixcloud.nl/gfo/searchtool/diameters.php";}
         String result;
         String[] splitResultArray;
         List<String> splitResultList = new ArrayList<String>();
-        if (type.equals("view")){
+        if (type.equals("gRating" ) || type.equals("diameter")){
             try {
                 //                connect to database
                 URL url = new URL(view_url);

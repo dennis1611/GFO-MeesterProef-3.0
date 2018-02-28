@@ -28,7 +28,7 @@ public class LookUpMeterActivity extends AppCompatActivity {
 //        get possible gRatings
         List<String> gRatings = new ArrayList<String>();
         try {
-            gRatings = new ViewGRating(this).execute("view").get();
+            gRatings = new ViewGRatingDiameter(this).execute("gRating").get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -36,11 +36,12 @@ public class LookUpMeterActivity extends AppCompatActivity {
 //        get possible diameters
         List<String> diameters = new ArrayList<String>();
         try {
-            diameters = new ViewDiameter(this).execute("view").get();
+            diameters = new ViewGRatingDiameter(this).execute("diameter").get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();}
+
 //        create gRatingSpinner
         gRatingSpinner = (Spinner) findViewById(R.id.gRatingSpinner);
         ArrayAdapter<String> gRatingAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, gRatings);
