@@ -55,8 +55,15 @@
         <activity
             android:name=".Admin.ViewAccount.CoupleToAccount.CoupleToAccountActivity"
             android:label="Couple To Account" />
-        <activity android:name=".User.UserActivity"
-            android:label="User"></activity>
+        <activity
+            android:name=".User.UserActivity"
+            android:label="User" />
+        <activity android:name=".SearchTool.LookUpMeterActivity"
+            android:label="Look Up Meter"/>
+        <activity android:name=".SearchTool.SearchMeterActivity"
+            android:label="Search Meter"/>
+        <activity android:name=".SearchTool.SettingsActivity"
+            android:label="Settings"></activity>
     </application>
 
 </manifest>

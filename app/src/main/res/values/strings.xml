@@ -1,4 +1,53 @@
 <resources>
     <string name="app_name">GFO-MeesterProef</string>
 
+    //ChooseUnitsScreen
+    <string name="label_VolumeUnit">VolumeUnit:</string>
+    <string-array name="unit_Volume">
+        <item>@string/Volume_Nm3h</item>
+        <item>@string/Volume_TJday</item>
+        <!--<item>@string/Volume_GJSm3</item>-->
+    </string-array>
+    <string name="label_pressureUnit">PressureUnit:</string>
+    <string-array name="unit_pressure">
+        <item>@string/Pressure_bar.abs</item>
+        <item>@string/Pressure_MPa</item>
+    </string-array>
+    <string name="label_temperatureUnit">TemperatureUnit:</string>
+    <string-array name="unit_temperature">
+        <item>@string/Temperature_Centrigrade</item>
+        <item>@string/Temperature_Kelvin</item>
+    </string-array>
+    <string name="label_diameterUnit">DiameterUnit:</string>
+    <string name="unit_diameter">mm</string>
+    <string name="label_QUnit">QUnit:</string>
+    <string name="unit_Q">m³/h</string>
+    <string name="label_densityUnit">DensityUnit:</string>
+    <string name="unit_density">kg/m³</string>
+    <string name="label_dpUnit">dpUnit:</string>
+    <string name="unit_dp">mbar</string>
+
+    //units
+    <string name="Volume_Nm3h">Nm³/h</string>
+    <string name="Volume_TJday">TJ/day</string>
+    <string name="Volume_GJSm3">GHV(GJ/Sm³)</string>
+    <string name="Pressure_bar.abs">bar abs.</string>
+    <string name="Pressure_MPa">MPa</string>
+    <string name="Temperature_Centrigrade">Degree Centigrade</string>
+    <string name="Temperature_Kelvin">Kelvin</string>
+
+
+    //SearchMeter
+    <string name="label_Volume">Volume</string>
+    <string name="label_LinePressure">Line Pressure</string>
+    <string name="label_LineTemp">Line Temperature</string>
+    <string name="label_BaseTemp">Base Temperature</string>
+    <string name="label_BasePress">Base Pressure</string>
+    <string name="label_PipeDiameter">Pipe Diameter</string>
+    <string name="label_QminATMAir">Qmin ATM Air</string>
+    <string name="label_DensityAtQMax">Density at Qmax</string>
+    <string name="label_DensityAtBase">Density at Base</string>
+    <string name="label_dpATMAir">dp ATM Air</string>
+    <string name="label_relDensity">Relative Density to Air</string>
+
 </resources>

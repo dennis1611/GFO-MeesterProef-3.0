@@ -9,6 +9,8 @@ import android.view.View;
 
 import com.gfo.gfo_meesterproef.LoginActivity;
 import com.gfo.gfo_meesterproef.R;
+import com.gfo.gfo_meesterproef.SearchTool.LookUpMeterActivity;
+import com.gfo.gfo_meesterproef.SearchTool.SearchMeterActivity;
 
 public class UserActivity extends AppCompatActivity {
 
@@ -23,6 +25,15 @@ public class UserActivity extends AppCompatActivity {
         Intent i = new Intent(this, FetchProductActivity.class);
         startActivity(i);
     }
+    public void SearchMeterActivity(View view){
+        Intent i = new Intent(this, SearchMeterActivity.class);
+        startActivity(i);
+    }
+    public void LookUpMeterActivity(View view){
+        Intent i = new Intent(this, LookUpMeterActivity.class);
+        startActivity(i);
+    }
+
 
     @Override//    confirmation for logout
     public void onBackPressed() {

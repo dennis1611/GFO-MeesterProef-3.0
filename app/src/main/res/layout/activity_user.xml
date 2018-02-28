@@ -13,4 +13,16 @@
         style="@style/SubHeader"
         android:text="Producten bekijken"/>
 
+    <TextView android:onClick="SearchMeterActivity"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        style="@style/SubHeader"
+        android:text="Search Meter"/>
+
+    <TextView android:onClick="LookUpMeterActivity"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        style="@style/SubHeader"
+        android:text="Look Up Meter"/>
+
 </LinearLayout>
