@@ -53,8 +53,6 @@ public class LookUpMeterActivity extends AppCompatActivity {
         diameterSpinner.setAdapter(diameterAdapter);
     }
 
-
-
     public void confirm(View view){
 //        get selected values
         gRating = gRatingSpinner.getSelectedItem().toString();

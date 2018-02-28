@@ -52,10 +52,6 @@
             android:label="Fetch File"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".OpenFileActivity"
-            android:label="Open File"
-            android:screenOrientation="portrait"/>
-        <activity
             android:name=".Admin.ViewAccount.EditAccount.EditAccountActivity"
             android:label="Edit Account"
             android:screenOrientation="portrait"/>
