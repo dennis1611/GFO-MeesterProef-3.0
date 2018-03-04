@@ -1,4 +1,4 @@
-package com.gfo.gfo_meesterproef.SearchTool;
+package com.gfo.gfo_meesterproef.SearchTool.Search;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gfo.gfo_meesterproef.R;
+import com.gfo.gfo_meesterproef.SearchTool.Search.SearchMeterActivity;
 
 public class SettingsActivity extends AppCompatActivity {
 

@@ -1,39 +1,38 @@
-package com.gfo.gfo_meesterproef.SearchTool;
+package com.gfo.gfo_meesterproef.SearchTool.Search;
+
 
 import android.content.Context;
 import android.os.AsyncTask;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.net.URLEncoder;
 
-
-public class ViewGRatingDiameter extends AsyncTask<String, Void, String> {
+public class FindMeter extends AsyncTask<String, Void, String> {
 
     Context context;
-    public ViewGRatingDiameter(Context ctx) {
+    public FindMeter(Context ctx) {
         context = ctx;
     }
 
+
     @Override
     protected String doInBackground(String... params) {
-
         String type = params[0];
+        String gRating = params[1];
+        String diameter = params[2];
 //        set view_url
-        String view_url = null;
-        if (type.equals("gRating")){view_url="https://mantixcloud.nl/gfo/searchtool/gRatings.php";}
-        if (type.equals("diameter")){view_url="https://mantixcloud.nl/gfo/searchtool/diameters.php";}
+        String view_url = "https://mantixcloud.nl/gfo/searchtool/findmeter.php";
         String result = null;
-//        String[] splitResultArray;
-//        List<String> splitResultList = new ArrayList<String>();
-        if (type.equals("gRating" ) || type.equals("diameter")){
+        if (type.equals("findMeter")){
             try {
                 //                connect to database
                 URL url = new URL(view_url);
@@ -41,6 +40,16 @@ public class ViewGRatingDiameter extends AsyncTask<String, Void, String> {
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
                 httpURLConnection.setDoInput(true);
+                //                send data
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "iso-8859-1"));
+                String post_data = URLEncoder.encode("grating","iso-8859-1")+"="+URLEncoder.encode(gRating,"iso-8859-1")+"&"
+                        +URLEncoder.encode("diameter","iso-8859-1")+"="+URLEncoder.encode(diameter,"iso-8859-1");
+                bufferedWriter.write(post_data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+
                 //                receive data
                 InputStream inputStream = httpURLConnection.getInputStream();
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
@@ -49,15 +58,12 @@ public class ViewGRatingDiameter extends AsyncTask<String, Void, String> {
                 while ((line = bufferedReader.readLine()) != null) {
                     result += line;
                 }
-                //                split result at , into ArrayList
-//                splitResultArray = result.split(",");
-//                splitResultList = (Arrays.asList(splitResultArray));
 
                 bufferedReader.close();
                 inputStream.close();
                 httpURLConnection.disconnect();
                 return result;
-            } catch (MalformedURLException e) {
+            }catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();

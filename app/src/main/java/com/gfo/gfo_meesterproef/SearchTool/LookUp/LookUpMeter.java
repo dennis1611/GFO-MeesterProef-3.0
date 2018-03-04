@@ -1,4 +1,4 @@
-package com.gfo.gfo_meesterproef.SearchTool;
+package com.gfo.gfo_meesterproef.SearchTool.LookUp;
 
 import android.content.Context;
 import android.os.AsyncTask;

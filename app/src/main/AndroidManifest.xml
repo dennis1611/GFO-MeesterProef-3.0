@@ -25,15 +25,15 @@
         <activity
             android:name=".User.FetchProductActivity"
             android:label="Fetch Product"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Admin.AdminActivity"
             android:label="Admin"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Admin.AddAccount.AddAccountActivity"
             android:label="Add Account"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Admin.ViewAccount.ViewAccountActivity"
             android:label="View Account"
@@ -42,40 +42,45 @@
         <activity
             android:name=".Admin.ViewFiles.ViewProductActivity"
             android:label="View Product"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Admin.ViewFiles.ViewFileActivity"
             android:label="View File"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".User.FetchFileActivity"
             android:label="Fetch File"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Admin.ViewAccount.EditAccount.EditAccountActivity"
             android:label="Edit Account"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Admin.ViewFiles.CoupleToProduct.CoupleToProductActivity"
             android:label="Couple To Product"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Admin.ViewAccount.CoupleToAccount.CoupleToAccountActivity"
             android:label="Couple To Account"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".User.UserActivity"
             android:label="User"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SearchTool.LookUpMeterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SearchTool.LookUp.LookUpMeterActivity"
             android:label="Look Up Meter"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SearchTool.SearchMeterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SearchTool.Search.SearchMeterActivity"
             android:label="Search Meter"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SearchTool.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SearchTool.Search.SettingsActivity"
             android:label="Settings"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".SearchTool.Search.InformationActivity" />
+        <activity android:name=".SearchTool.Search.ErrorActivity"></activity>
     </application>
 
 </manifest>

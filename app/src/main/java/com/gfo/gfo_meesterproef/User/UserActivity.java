@@ -9,8 +9,8 @@ import android.view.View;
 
 import com.gfo.gfo_meesterproef.LoginActivity;
 import com.gfo.gfo_meesterproef.R;
-import com.gfo.gfo_meesterproef.SearchTool.LookUpMeterActivity;
-import com.gfo.gfo_meesterproef.SearchTool.SearchMeterActivity;
+import com.gfo.gfo_meesterproef.SearchTool.LookUp.LookUpMeterActivity;
+import com.gfo.gfo_meesterproef.SearchTool.Search.SearchMeterActivity;
 
 public class UserActivity extends AppCompatActivity {
 
