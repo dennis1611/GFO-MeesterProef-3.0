@@ -7,22 +7,114 @@
     android:orientation="vertical"
     tools:context="com.gfo.gfo_meesterproef.User.UserActivity">
 
-    <TextView android:onClick="FetchProductActivity"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        style="@style/SubHeader"
-        android:text="Producten bekijken"/>
+    <RelativeLayout
+        android:layout_width="@dimen/logoSize"
+        android:layout_height="@dimen/logoSize"
+        android:background="@mipmap/logo_small"
+        android:layout_gravity="center">
 
-    <TextView android:onClick="SearchMeterActivity"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        style="@style/SubHeader"
-        android:text="Search Meter"/>
+        <View
+            android:id="@+id/center"
+            android:layout_width="2px"
+            android:layout_height="2px"
+            android:layout_centerInParent="true" />
 
-    <TextView android:onClick="LookUpMeterActivity"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        style="@style/SubHeader"
-        android:text="Look Up Meter"/>
+        <View
+            android:id="@+id/semi_top"
+            android:layout_width="2px"
+            android:layout_height="2px"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/center"
+            android:layout_marginBottom="@dimen/InnerRingMargin" />
+
+        <View
+            android:id="@+id/semi_bottom"
+            android:layout_width="2px"
+            android:layout_height="2px"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/center"
+            android:layout_marginTop="@dimen/InnerRingMargin" />
+
+        <Button
+            android:id="@+id/top"
+            android:layout_width="@dimen/diameter"
+            android:layout_height="@dimen/diameter"
+            android:background="@drawable/round_button"
+            android:layout_above="@+id/semi_top"
+            android:layout_marginBottom="@dimen/OuterRingMargin"
+            android:layout_centerHorizontal="true"
+            android:text="fetch product"
+            android:onClick="FetchProductActivity"/>
+
+        <Button
+            android:id="@+id/top_right"
+            android:layout_width="@dimen/diameter"
+            android:layout_height="@dimen/diameter"
+            android:background="@drawable/round_button"
+            android:layout_above="@+id/right"
+            android:layout_marginBottom="@dimen/verticalMargin"
+            android:layout_toRightOf="@+id/center"
+            android:layout_marginLeft="@dimen/InnerRingMargin"/>
+
+        <View
+            android:id="@+id/right"
+            android:layout_width="2px"
+            android:layout_height="2px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/center"
+            android:layout_marginLeft="@dimen/horizontalMargin"/>
+
+        <Button
+            android:id="@+id/bottom_right"
+            android:layout_width="@dimen/diameter"
+            android:layout_height="@dimen/diameter"
+            android:background="@drawable/round_button"
+            android:layout_below="@+id/right"
+            android:layout_marginTop="@dimen/verticalMargin"
+            android:layout_toRightOf="@+id/center"
+            android:layout_marginLeft="@dimen/InnerRingMargin"
+            android:text="search meter"
+            android:onClick="SearchMeterActivity"/>
+
+        <Button
+            android:id="@+id/bottom"
+            android:layout_width="@dimen/diameter"
+            android:layout_height="@dimen/diameter"
+            android:background="@drawable/round_button"
+            android:layout_below="@+id/semi_bottom"
+            android:layout_marginTop="@dimen/verticalMargin"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/bottom_left"
+            android:layout_width="@dimen/diameter"
+            android:layout_height="@dimen/diameter"
+            android:background="@drawable/round_button"
+            android:layout_below="@+id/left"
+            android:layout_marginTop="@dimen/verticalMargin"
+            android:layout_toLeftOf="@+id/center"
+            android:layout_marginRight="@dimen/InnerRingMargin"
+            android:text="look up meter"
+            android:onClick="LookUpMeterActivity"/>
+
+        <View
+            android:id="@+id/left"
+            android:layout_width="2px"
+            android:layout_height="2px"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/center"
+            android:layout_marginRight="@dimen/horizontalMargin"/>
+
+        <Button
+            android:id="@+id/top_left"
+            android:layout_width="@dimen/diameter"
+            android:layout_height="@dimen/diameter"
+            android:background="@drawable/round_button"
+            android:layout_above="@+id/left"
+            android:layout_marginBottom="@dimen/verticalMargin"
+            android:layout_toLeftOf="@+id/center"
+            android:layout_marginRight="@dimen/InnerRingMargin" />
+
+    </RelativeLayout>
 
 </LinearLayout>

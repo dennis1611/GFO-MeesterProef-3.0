@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logoSize">720px</dimen>
+    <dimen name="InnerRingMargin">103px</dimen>
+    <dimen name="OuterRingMargin">28px</dimen>
+    <dimen name="verticalMargin">28px</dimen>
+    <dimen name="horizontalMargin">181px</dimen>
+    <dimen name="diameter">146px</dimen>
+
+</resources>
