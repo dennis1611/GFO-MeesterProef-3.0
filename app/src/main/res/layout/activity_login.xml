@@ -57,14 +57,13 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:onClick="login"
         android:text="Login"
         android:layout_marginTop="16dp"
         android:layout_below="@+id/editTextPass"
         android:layout_alignLeft="@+id/textView2"
         android:layout_alignStart="@+id/textView2"
-        android:shadowColor="@color/black"/>
+        android:theme="@style/Button"/>
 
     <ProgressBar
         style="?android:attr/progressBarStyleLarge"

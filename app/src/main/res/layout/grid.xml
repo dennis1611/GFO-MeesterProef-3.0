@@ -10,7 +10,7 @@
         android:layout_margin="10dp"
         android:gravity="center"
         android:horizontalSpacing="10dp"
-        android:verticalSpacing="10dp"
+        android:verticalSpacing="12dp"
         android:numColumns="2"
         android:stretchMode="columnWidth"
         android:outlineProvider="bounds"

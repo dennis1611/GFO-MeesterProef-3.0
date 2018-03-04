@@ -205,7 +205,7 @@ public class SearchMeterActivity extends AppCompatActivity {
         gRating_Diameter[36][1] = 600;
     }
 
-    public void confirm(View view){
+    public void search(View view){
         getText();
         for(int i = 0; i < valuesEditText.length; i++) {
             if(isErrorInValues[i]) {

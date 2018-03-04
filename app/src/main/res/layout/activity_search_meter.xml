@@ -214,8 +214,9 @@
         android:layout_height="wrap_content"
         android:text="Confirm"
         android:textAllCaps="false"
-        android:onClick="confirm"
+        android:onClick="search"
         android:id="@+id/confirmButton"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:theme="@style/Button"/>
 
 </RelativeLayout>

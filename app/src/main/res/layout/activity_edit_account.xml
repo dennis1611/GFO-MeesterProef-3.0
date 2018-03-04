@@ -142,9 +142,9 @@
         android:id="@+id/button2"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:onClick="editAccount"
         android:text="EDIT ACCOUNT"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:theme="@style/Button"/>
 
 </LinearLayout>

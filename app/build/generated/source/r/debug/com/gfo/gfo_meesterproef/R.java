@@ -31,8 +31,6 @@ public final class R {
     }
     public static final class array {
         public static final int spinner_pipeDiameter=0x7f0d0000;
-        /** <item>@string/Volume_GJSm3</item>
-         */
         public static final int unit_Volume=0x7f0d0001;
         public static final int unit_pressure=0x7f0d0002;
         public static final int unit_temperature=0x7f0d0003;

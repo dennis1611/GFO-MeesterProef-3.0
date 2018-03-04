@@ -115,6 +115,7 @@
         android:textAllCaps="false"
         android:onClick="confirm"
         android:id="@+id/confirmButton"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:theme="@style/Button"/>
 
 </RelativeLayout>

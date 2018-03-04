@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:onClick="addAccount"
             android:text="Create"
-            android:shadowColor="@color/black" />
+            android:theme="@style/Button" />
     </RelativeLayout>
     
 </LinearLayout>
