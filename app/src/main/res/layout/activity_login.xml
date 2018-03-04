@@ -63,6 +63,7 @@
         android:layout_below="@+id/editTextPass"
         android:layout_alignLeft="@+id/textView2"
         android:layout_alignStart="@+id/textView2"
+        android:layout_gravity="center"
         android:theme="@style/Button"/>
 
     <ProgressBar

@@ -145,6 +145,7 @@
         android:onClick="editAccount"
         android:text="EDIT ACCOUNT"
         android:layout_marginTop="20dp"
+        android:layout_gravity="center"
         android:theme="@style/Button"/>
 
 </LinearLayout>
