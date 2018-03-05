@@ -17,6 +17,7 @@ import com.gfo.gfo_meesterproef.Admin.ViewFiles.CoupleToProduct.CoupleToProductA
 import com.gfo.gfo_meesterproef.Custom.FolderAdapter;
 import com.gfo.gfo_meesterproef.OpenFileBackgroundWorker;
 import com.gfo.gfo_meesterproef.R;
+import com.gfo.gfo_meesterproef.Support.ConnectionCheck;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,9 +62,11 @@ public class ViewProductActivity extends AppCompatActivity {
         adminProductGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
+                //        check for internet connection
+                boolean connection = new ConnectionCheck().test(getApplicationContext());
+                if (!connection){return;}
 //                get selected product
                 selectedProduct = (String) adminProductGrid.getItemAtPosition(position);
-
 //                choice to couple product or view files
                 AlertDialog.Builder builder = new AlertDialog.Builder(ViewProductActivity.this);
                 builder.setTitle(selectedProduct);

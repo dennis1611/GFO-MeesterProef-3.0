@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.gfo.gfo_meesterproef.OpenFileBackgroundWorker;
 import com.gfo.gfo_meesterproef.R;
+import com.gfo.gfo_meesterproef.Support.ConnectionCheck;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,6 +61,9 @@ public class FetchFileActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View viewClicked, int position, long id) {
 //                get selected file
+                //        check for internet connection
+                boolean connection = new ConnectionCheck().test(getApplicationContext());
+                if (!connection){return;}
                 TextView textView = (TextView) viewClicked;
                 clickedFile = textView.getText().toString();
 //                contact database for files
@@ -81,6 +85,9 @@ public class FetchFileActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed(){
+        //        check for internet connection
+        boolean connection = new ConnectionCheck().test(getApplicationContext());
+        if (!connection){return;}
         Intent i = new Intent(FetchFileActivity.this, FetchProductActivity.class);
         FetchFileActivity.this.finish();
         startActivity(i);

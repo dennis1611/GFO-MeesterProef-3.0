@@ -19,6 +19,7 @@ import com.gfo.gfo_meesterproef.Admin.Uncouple;
 import com.gfo.gfo_meesterproef.Admin.ViewAccount.ViewAccountActivity;
 import com.gfo.gfo_meesterproef.Admin.ViewFiles.ViewProduct;
 import com.gfo.gfo_meesterproef.R;
+import com.gfo.gfo_meesterproef.Support.ConnectionCheck;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -42,7 +43,7 @@ public class CoupleToAccountActivity extends AppCompatActivity {
         toCouple.clear();
         toUncouple = new ArrayList<String>();
         toUncouple.clear();
-//        get selected username and group
+//        get selected username
         SharedPreferences selectedAccountPref = getSharedPreferences("selectedAccountPreference", contextOfViewAccount.MODE_PRIVATE);
         username = selectedAccountPref.getString("selectedUsername", "");
 //        change label
@@ -145,6 +146,9 @@ public class CoupleToAccountActivity extends AppCompatActivity {
     }
 
     private void couple() {
+        //        check for internet connection
+        boolean connection = new ConnectionCheck().test(getApplicationContext());
+        if (!connection){return;}
 //        couple all selected products
         Iterator<String> toCoupleIterator = toCouple.iterator();
         while (toCoupleIterator.hasNext()) {
@@ -161,6 +165,9 @@ public class CoupleToAccountActivity extends AppCompatActivity {
         }
     }
     private void uncouple() {
+        //        check for internet connection
+        boolean connection = new ConnectionCheck().test(getApplicationContext());
+        if (!connection){return;}
 //        uncouple all selected products
         Iterator<String> toUncoupleIterator = toUncouple.iterator();
         while (toUncoupleIterator.hasNext()) {
@@ -178,6 +185,9 @@ public class CoupleToAccountActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
+        //        check for internet connection
+        boolean connection = new ConnectionCheck().test(getApplicationContext());
+        if (!connection){return;}
         Intent i = new Intent(CoupleToAccountActivity.this, ViewAccountActivity.class);
         CoupleToAccountActivity.this.finish();
         startActivity(i);

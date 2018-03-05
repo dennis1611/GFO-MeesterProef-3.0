@@ -19,6 +19,7 @@ import com.gfo.gfo_meesterproef.Custom.AdminAccountsFragment;
 import com.gfo.gfo_meesterproef.Custom.UserAccountsFragment;
 import com.gfo.gfo_meesterproef.Custom.ViewPagerAdapter;
 import com.gfo.gfo_meesterproef.R;
+import com.gfo.gfo_meesterproef.Support.ConnectionCheck;
 
 import java.util.concurrent.ExecutionException;
 
@@ -140,6 +141,9 @@ public class ViewAccountActivity extends AppCompatActivity{
         if (type.equals("user")){
         builder.setNegativeButton("Couple Product", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
+                //        check for internet connection
+                boolean connection = new ConnectionCheck().test(getApplicationContext());
+                if (!connection){return;}
                 Intent i = new Intent(ViewAccountActivity.this, CoupleToAccountActivity.class);
                 startActivity(i);
             }

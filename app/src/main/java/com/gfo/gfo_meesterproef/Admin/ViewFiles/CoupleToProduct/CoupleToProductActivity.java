@@ -21,6 +21,7 @@ import com.gfo.gfo_meesterproef.Admin.Uncouple;
 import com.gfo.gfo_meesterproef.Admin.ViewAccount.ViewAccountBackgroundWorker;
 import com.gfo.gfo_meesterproef.Admin.ViewFiles.ViewProductActivity;
 import com.gfo.gfo_meesterproef.R;
+import com.gfo.gfo_meesterproef.Support.ConnectionCheck;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -154,6 +155,9 @@ public class CoupleToProductActivity extends AppCompatActivity {
     }
 
     private void couple() {
+        //        check for internet connection
+        boolean connection = new ConnectionCheck().test(getApplicationContext());
+        if (!connection){return;}
 //        couple all selected accounts
         Iterator<String> toCoupleIterator = toCouple.iterator();
         while (toCoupleIterator.hasNext()) {
@@ -170,6 +174,9 @@ public class CoupleToProductActivity extends AppCompatActivity {
         }
     }
     private void uncouple() {
+        //        check for internet connection
+        boolean connection = new ConnectionCheck().test(getApplicationContext());
+        if (!connection){return;}
 //        uncouple all selected accounts
         Iterator<String> toUncoupleIterator = toUncouple.iterator();
         while (toUncoupleIterator.hasNext()) {
@@ -187,6 +194,9 @@ public class CoupleToProductActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
+        //        check for internet connection
+        boolean connection = new ConnectionCheck().test(getApplicationContext());
+        if (!connection){return;}
         Intent i = new Intent(CoupleToProductActivity.this, ViewProductActivity.class);
         CoupleToProductActivity.this.finish();
         startActivity(i);

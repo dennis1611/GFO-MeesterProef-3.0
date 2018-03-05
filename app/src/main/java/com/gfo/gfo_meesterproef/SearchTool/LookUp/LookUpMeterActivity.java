@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.gfo.gfo_meesterproef.R;
 import com.gfo.gfo_meesterproef.SearchTool.ViewGRatingDiameter;
+import com.gfo.gfo_meesterproef.Support.ConnectionCheck;
 import com.gfo.gfo_meesterproef.User.UserActivity;
 
 import java.util.ArrayList;
@@ -76,6 +77,9 @@ public class LookUpMeterActivity extends AppCompatActivity {
     }
 
     public void confirm(View view){
+        //        check for internet connection
+        boolean connection = new ConnectionCheck().test(getApplicationContext());
+        if (!connection){return;}
 //        get selected values
         gRating = gRatingSpinner.getSelectedItem().toString();
         diameter = diameterSpinner.getSelectedItem().toString();

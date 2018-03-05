@@ -12,6 +12,7 @@ import com.gfo.gfo_meesterproef.Admin.ViewAccount.ViewAccountActivity;
 import com.gfo.gfo_meesterproef.Admin.ViewFiles.ViewProductActivity;
 import com.gfo.gfo_meesterproef.LoginActivity;
 import com.gfo.gfo_meesterproef.R;
+import com.gfo.gfo_meesterproef.Support.ConnectionCheck;
 
 public class AdminActivity extends AppCompatActivity {
 
@@ -27,10 +28,16 @@ public class AdminActivity extends AppCompatActivity {
         startActivity(i);
     }
     public void ViewAccountActivity (View view){
+        //        check for internet connection
+        boolean connection = new ConnectionCheck().test(getApplicationContext());
+        if (!connection){return;}
         Intent i = new Intent(this, ViewAccountActivity.class);
         startActivity(i);
     }
     public void ViewProductActivity (View view){
+        //        check for internet connection
+        boolean connection = new ConnectionCheck().test(getApplicationContext());
+        if (!connection){return;}
         Intent i = new Intent(this, ViewProductActivity.class);
         startActivity(i);
     }

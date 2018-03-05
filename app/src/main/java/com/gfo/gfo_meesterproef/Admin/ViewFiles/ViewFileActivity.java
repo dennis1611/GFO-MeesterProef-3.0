@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.gfo.gfo_meesterproef.Admin.ViewFiles.CoupleToProduct.CoupleToProductActivity;
 import com.gfo.gfo_meesterproef.OpenFileBackgroundWorker;
 import com.gfo.gfo_meesterproef.R;
+import com.gfo.gfo_meesterproef.Support.ConnectionCheck;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +65,9 @@ public class ViewFileActivity extends AppCompatActivity {
         adminProductList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View viewClicked, int position, long id) {
+                //        check for internet connection
+                boolean connection = new ConnectionCheck().test(getApplicationContext());
+                if (!connection){return;}
 //                get selected file
                 TextView textView = (TextView) viewClicked;
                 clickedFile = textView.getText().toString();
@@ -84,6 +88,9 @@ public class ViewFileActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
+        //        check for internet connection
+        boolean connection = new ConnectionCheck().test(getApplicationContext());
+        if (!connection){return;}
         Intent i = new Intent(ViewFileActivity.this, ViewProductActivity.class);
         ViewFileActivity.this.finish();
         startActivity(i);

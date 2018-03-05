@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.gfo.gfo_meesterproef.Admin.ViewAccount.ViewAccountActivity;
 import com.gfo.gfo_meesterproef.R;
+import com.gfo.gfo_meesterproef.Support.ConnectionCheck;
 
 import static com.gfo.gfo_meesterproef.Admin.ViewAccount.ViewAccountActivity.contextOfViewAccount;
 
@@ -70,6 +71,9 @@ public class EditAccountActivity extends AppCompatActivity {
             emailET.setError("Please enter a valid E-mail address");
             return;
         }
+        //        check for internet connection
+        boolean connection = new ConnectionCheck().test(getApplicationContext());
+        if (!connection){return;}
 //        create alertDialog
         AlertDialog.Builder builder = new AlertDialog.Builder(EditAccountActivity.this);
         builder.setTitle("Edit Account?");
@@ -104,6 +108,9 @@ public class EditAccountActivity extends AppCompatActivity {
     }
 
     public void deleteAccount() {
+        //        check for internet connection
+        boolean connection = new ConnectionCheck().test(getApplicationContext());
+        if (!connection){return;}
 //        create alertDialog
         AlertDialog.Builder builder = new AlertDialog.Builder(EditAccountActivity.this);
         builder.setTitle("Delete Account?");
@@ -147,5 +154,15 @@ public class EditAccountActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed(){
+        //        check for internet connection
+        boolean connection = new ConnectionCheck().test(getApplicationContext());
+        if (!connection){return;}
+        Intent i = new Intent(EditAccountActivity.this, ViewAccountActivity.class);
+        EditAccountActivity.this.finish();
+        startActivity(i);
     }
 }
