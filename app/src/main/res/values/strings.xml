@@ -33,7 +33,7 @@
     <string name="Volume_GJSm3">GHV(GJ/Sm³)</string>
     <string name="Pressure_bar.abs">bar abs.</string>
     <string name="Pressure_MPa">MPa</string>
-    <string name="Temperature_Centrigrade">Degree Centigrade</string>
+    <string name="Temperature_Centrigrade">℃</string>
     <string name="Temperature_Kelvin">Kelvin</string>
 
 
