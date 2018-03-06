@@ -38,7 +38,7 @@ public class FetchFileActivity extends AppCompatActivity {
         String username = usernamePref.getString("username", "");
         setTitle("Files in "+product);
 
-//        contact database for products
+//        contact database for files
         String type = "fetch";
         List<String> products = new ArrayList<String>();
         try {
