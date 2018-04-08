@@ -56,11 +56,8 @@ public class SearchMeterActivity extends AppCompatActivity {
 //        create diameterSpinner
         pipeDiameterSpinner = (Spinner) findViewById(R.id.pipeDiameterSpinner);
 
-        ArrayAdapter<CharSequence> pipeDiameterAdapter = ArrayAdapter.createFromResource(this, R.array.spinner_pipeDiameter, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> pipeDiameterAdapter = ArrayAdapter.createFromResource(this, R.array.spinner_pipeDiameter, R.layout.spinner_item);
         pipeDiameterAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-//        ArrayAdapter<Integer> pipeDiameterAdapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_item, diameterArray);
-//        pipeDiameterAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         pipeDiameterSpinner.setAdapter(pipeDiameterAdapter);
         spinnerNumber = 5;
 
@@ -321,14 +318,6 @@ public class SearchMeterActivity extends AppCompatActivity {
         maxDensityAtQLine = values[7]/( Math.pow((lineCapacity/maxCapacity), 2) );
         PMaxAtQLine = maxDensityAtQLine/values[8];
         dpLineCond = values[9]*values[10]*(values[1]/1.01325)*Math.pow((lineCapacity/maxCapacity), 2);
-
-        /*System.out.println("lineCapacity: " + lineCapacity);
-        System.out.println("pipeVelocity: " + pipeVelocity);
-        System.out.println("minCapacity: " + minCapacity);
-        System.out.println("maxCapacity: " + maxCapacity);
-        System.out.println("maxDensityAtQLine: " + maxDensityAtQLine);
-        System.out.println("PMaxAtQLine: " + PMaxAtQLine);
-        System.out.println("dpLineCond: " + dpLineCond);*/
     }
 
     private void calculateMaxCapacity() {

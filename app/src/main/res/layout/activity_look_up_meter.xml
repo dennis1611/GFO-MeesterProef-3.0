@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="G-Rating"/>
+
     <Spinner
         android:layout_width="120dp"
         android:layout_height="wrap_content"
@@ -20,11 +21,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Diameter"/>
-    <Spinner
-        android:layout_width="120dp"
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/diameterSpinner"
-        android:layout_marginTop="8dp"/>
+        android:orientation="horizontal">
+
+        <Spinner
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/diameterSpinner"
+            android:layout_marginTop="8dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select G_Rating first" />
+    </LinearLayout>
 
     <Button
         android:layout_width="wrap_content"

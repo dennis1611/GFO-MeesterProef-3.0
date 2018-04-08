@@ -48,17 +48,17 @@ public class SettingsActivity extends AppCompatActivity {
     private void createSpinners() {
         //        create volumeSpinner
         volumeSpinner = (Spinner) findViewById(R.id.volumeSpinner);
-        ArrayAdapter<CharSequence> volumeAdapter = ArrayAdapter.createFromResource(this, R.array.unit_Volume, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> volumeAdapter = ArrayAdapter.createFromResource(this, R.array.unit_Volume, R.layout.spinner_item);
         volumeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         volumeSpinner.setAdapter(volumeAdapter);
 //        create pressureSpinner
         pressureSpinner = (Spinner) findViewById(R.id.pressureSpinner);
-        ArrayAdapter<CharSequence> pressureAdapter = ArrayAdapter.createFromResource(this, R.array.unit_pressure, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> pressureAdapter = ArrayAdapter.createFromResource(this, R.array.unit_pressure, R.layout.spinner_item);
         pressureAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         pressureSpinner.setAdapter(pressureAdapter);
 //        create temperatureSpinner
         temperatureSpinner = (Spinner) findViewById(R.id.temperatureSpinner);
-        ArrayAdapter<CharSequence> temperatureAdapter = ArrayAdapter.createFromResource(this, R.array.unit_temperature, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> temperatureAdapter = ArrayAdapter.createFromResource(this, R.array.unit_temperature, R.layout.spinner_item);
         temperatureAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         temperatureSpinner.setAdapter(temperatureAdapter);
     }
