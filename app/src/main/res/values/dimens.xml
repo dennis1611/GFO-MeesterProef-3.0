@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="logoSize">720px</dimen>
-    <dimen name="InnerRingMargin">103px</dimen>
-    <dimen name="OuterRingMargin">28px</dimen>
-    <dimen name="verticalMargin">28px</dimen>
-    <dimen name="horizontalMargin">181px</dimen>
-    <dimen name="diameter">146px</dimen>
+    <dimen name="logoSize">360dp</dimen>
+    <dimen name="InnerRingMargin">51.5dp</dimen>
+    <dimen name="OuterRingMargin">14dp</dimen>
+    <dimen name="verticalMargin">14dp</dimen>
+    <dimen name="horizontalMargin">90.5dp</dimen>
+    <dimen name="diameter">73dp</dimen>
 
 </resources>
