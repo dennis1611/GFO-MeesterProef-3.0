@@ -1,7 +1,10 @@
 package com.gfo.gfo_meesterproef;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -19,9 +22,16 @@ import java.net.URLEncoder;
 public class LoginBackgroundWorker extends AsyncTask<String, Void, String> {
 
     Context context;
-    LoginBackgroundWorker(Context ctx) {
+    private OnTaskCompleted listener;
+    LoginBackgroundWorker(Context ctx, OnTaskCompleted listener) {
         context = ctx;
+        this.listener=listener;
     }
+//    get access to ProgressBar in activity
+@SuppressLint("StaticFieldLeak") ProgressBar progressBar;
+    public void setProgressBar(ProgressBar progressBar) { this.progressBar = progressBar; }
+//    create interface to communicate with Activity
+    public interface OnTaskCompleted{ void onTaskCompleted(String result);}
 
     @Override
     protected String doInBackground(String... params) {
@@ -32,6 +42,7 @@ public class LoginBackgroundWorker extends AsyncTask<String, Void, String> {
         String result = null;
         if(type.equals("login")) {
             try {
+//                publishProgress();
 //                connect to database
                 URL url = new URL(login_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
@@ -72,10 +83,14 @@ public class LoginBackgroundWorker extends AsyncTask<String, Void, String> {
 
     @Override
     protected void onPreExecute() {
+        progressBar.setVisibility(View.VISIBLE);
     }
 
     @Override
     protected void onPostExecute(String result) {
+        progressBar.setVisibility(View.GONE);
+//        notify Activity that AsyncTask is completed
+            listener.onTaskCompleted(result);
     }
 
     @Override
