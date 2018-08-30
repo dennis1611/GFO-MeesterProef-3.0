@@ -52,6 +52,16 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         style="@style/EditText"/>
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="user"
+        android:layout_toLeftOf="@id/button"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@id/editTextPass"
+        android:onClick="setUser"/>
 
     <Button
         android:id="@+id/button"
@@ -65,6 +75,16 @@
         android:layout_alignStart="@+id/textView2"
         android:layout_gravity="center"
         android:theme="@style/Button"/>
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="admin"
+        android:layout_toRightOf="@id/button"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@id/editTextPass"
+        android:onClick="setAdmin"/>
 
     <ProgressBar
         style="?android:attr/progressBarStyleLarge"
