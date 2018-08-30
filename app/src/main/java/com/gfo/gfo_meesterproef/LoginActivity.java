@@ -33,6 +33,13 @@ public class LoginActivity extends AppCompatActivity {
 //        needed to save username
         contextOfLogin = getApplicationContext();
     }
+    
+    //    shortcut to select user account
+    public void setUser(View view){ usernameET.setText("user");
+        passwordET.setText("user"); }
+//    shortcut to select admin account
+    public void setAdmin(View view){ usernameET.setText("admin");
+        passwordET.setText("admin"); }
 
     public void login(View view) {
 //        check for internet connection
